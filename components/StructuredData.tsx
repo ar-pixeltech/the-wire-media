@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 
 export default function StructuredData() {
   // Organization Schema
@@ -199,7 +198,7 @@ export default function StructuredData() {
   };
 
   return (
-    <Helmet>
+    <>
       {/* Organization Schema */}
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
@@ -229,6 +228,6 @@ export default function StructuredData() {
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
       </script>
-    </Helmet>
+    </>
   );
 }
