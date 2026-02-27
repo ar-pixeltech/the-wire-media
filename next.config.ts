@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { siteConfig } from "./config/site";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -9,7 +10,7 @@ const nextConfig: NextConfig = {
   },
 
   env: {
-    SITE_NAME: "TechConsult",
+    SITE_NAME: siteConfig.name || "The Wire Media",
   },
 };
 

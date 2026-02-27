@@ -1,7 +1,8 @@
 import { Facebook, Twitter, Linkedin, Instagram, Github } from "@/components/icons";
 import Link from "next/link";
 // import { pool } from "@/lib/db";
-import { getAppConfigurationsService } from "@/modules/app-configuration/app-configuration.service";
+// import { getAppConfigurationsService } from "@/modules/app-configuration/app-configuration.service";
+import { siteConfig } from "@/config/site";
 // export default async function Home() {
 //   
 
@@ -31,7 +32,7 @@ export default async function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-column">
-            <h3>TechConsult</h3>
+            <h3>{siteConfig.name || "The Wire Media"}</h3>
             {/* <div>{JSON.stringify(appConfigurations)}</div>; */}
             <p>
               Your trusted partner for IT consulting, web development, and digital marketing

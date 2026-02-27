@@ -1,5 +1,5 @@
 {
-  "name": "it-consultant-website",
+  "name": "the-wire-media",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "next start",
     "migrate": "node -r dotenv/config node_modules/node-pg-migrate/bin/node-pg-migrate up -m database/migrations",
     "migrate:down": "node -r dotenv/config node_modules/node-pg-migrate/bin/node-pg-migrate down -m database/migrations",
+    "seed": "ts-node database/seed/index.ts",
     "lint": "eslint"
   },
   "dependencies": {

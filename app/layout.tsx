@@ -1,14 +1,15 @@
-// import "./globals.css";
 import "../styles/globals.css";
 import "../styles/index.css";
 import "../styles/main.scss";
 
-// import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+// import { unstable_cache } from "next/cache";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL(siteConfig?.url || "http://localhost:3000"),
   title: {
     default: "IT Consultant Company | Digital Solutions",
     template: "%s | IT Consultant Company",
@@ -43,6 +44,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {/* <Navbar /> */}
+        <Header />
         {children}
         <Footer />
       </body>

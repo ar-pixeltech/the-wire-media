@@ -1,5 +1,5 @@
-// import { useState, useEffect } from 'react';
 import { Menu } from "@/components/icons";
+import { siteConfig } from "@/config/site";
 import Link from 'next/link';
 
 // export default function Header() {
@@ -88,7 +88,7 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" className="logo text-2xl font-bold">
-          TechConsult
+          {siteConfig.name || "TechConsult"}
         </Link>
 
         {/* Hidden Checkbox */}
