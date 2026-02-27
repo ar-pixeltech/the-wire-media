@@ -1,8 +1,23 @@
-import { Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Github } from "@/components/icons";
 import Link from "next/link";
+// import { pool } from "@/lib/db";
+import { getAppConfigurationsService } from "@/modules/app-configuration/app-configuration.service";
+// export default async function Home() {
+//   
 
-export default function Footer() {
+//   return (
+//     <div>
+//       {result.rows.map((user) => (
+//         <p key={user.id}>{user.name}</p>
+//       ))}
+//     </div>
+//   );
+// }
+
+export default async function Footer() {
   const currentYear = new Date().getFullYear();
+
+  // const appConfigurations = await getAppConfigurationsService();
 
   // const scrollToSection = (id: string) => {
   //   const element = document.getElementById(id);
@@ -17,6 +32,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-column">
             <h3>TechConsult</h3>
+            {/* <div>{JSON.stringify(appConfigurations)}</div>; */}
             <p>
               Your trusted partner for IT consulting, web development, and digital marketing
               solutions. We help businesses grow and thrive in the digital age.

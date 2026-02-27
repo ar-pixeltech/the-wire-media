@@ -7,6 +7,15 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+
+// import { cache } from "react";
+// So it doesn't hit DB every request. FOR Configuration data that doesn't change often, we can cache it in memory. This is a simple approach and works well for small datasets. For larger datasets or more complex caching needs, consider using an external caching solution like Redis.
+// export const getAppConfig = cache(async () => {
+//   // Simulate fetching from database
+//   const configurations = await getAppConfigurationsService();
+//   return configurations;
+// });
+
 export default function Home() {
 
   // const scrollToContact = () => {
